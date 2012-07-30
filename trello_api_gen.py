@@ -1,7 +1,13 @@
 import os
 import re
 import requests
-import pystache
+import pystache # requires pystache 0.4.1 or ealier because pystache.View has been deprecated
+#to get pystache 0.4.1:
+# > git clone https://github.com/defunkt/pystache.git
+# > cd ./pystache
+# > git checkout v0.4.1
+# > python setup.py install
+# TODO: change ApiClass and TrelloApi to not use pystache.View
 from urlparse import urljoin
 from BeautifulSoup import BeautifulSoup as Soup
 
