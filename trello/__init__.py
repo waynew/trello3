@@ -3,10 +3,12 @@ from .actions import Actions
 from .boards import Boards
 from .cards import Cards
 from .checklists import Checklists
+from .devices import Devices
 from .lists import Lists
 from .members import Members
 from .notifications import Notifications
 from .organizations import Organizations
+from .searchs import Searchs
 from .tokens import Tokens
 from .types import Types
 
@@ -19,10 +21,12 @@ class TrelloApi(object):
         self.boards = Boards(apikey, token)
         self.cards = Cards(apikey, token)
         self.checklists = Checklists(apikey, token)
+        self.devices = Devices(apikey, token)
         self.lists = Lists(apikey, token)
         self.members = Members(apikey, token)
         self.notifications = Notifications(apikey, token)
         self.organizations = Organizations(apikey, token)
+        self.searchs = Searchs(apikey, token)
         self.tokens = Tokens(apikey, token)
         self.types = Types(apikey, token)
         
@@ -33,10 +37,12 @@ class TrelloApi(object):
         self.boards._token = token
         self.cards._token = token
         self.checklists._token = token
+        self.devices._token = token
         self.lists._token = token
         self.members._token = token
         self.notifications._token = token
         self.organizations._token = token
+        self.searchs._token = token
         self.tokens._token = token
         self.types._token = token
         
