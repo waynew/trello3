@@ -1,0 +1,6 @@
+*.pyc
+*.pyo
+dist/*
+build/*
+_build/*
+*.sw[a-p]
