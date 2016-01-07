@@ -8,8 +8,13 @@ import pystache # requires pystache 0.4.1 or ealier because pystache.View has be
 # > git checkout v0.4.1
 # > python setup.py install
 # TODO: change ApiClass and TrelloApi to not use pystache.View
-from urlparse import urljoin
-from BeautifulSoup import BeautifulSoup as Soup
+try:
+    from urlparse import urljoin
+except ImportError:
+    # Probably Python3
+    from urllib.parse import urljoin
+
+from bs4 import BeautifulSoup as Soup
 
 INDEX = 'https://trello.com/docs/api/index.html'
 
@@ -27,7 +32,7 @@ def get_soup(url):
 
 def main():
     sections = get_sections()
-    print sections
+    print(sections)
     if not os.path.exists('trello'):
         os.mkdir('trello')
     modules = []

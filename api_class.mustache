@@ -1,4 +1,3 @@
-import json
 import requests
 
 class {{class_name}}(object):
@@ -12,6 +11,6 @@ class {{class_name}}(object):
     def {{name}}(self, {{def_args}}):
         resp = requests.{{method}}({{url}}, {{args}})
         resp.raise_for_status()
-        return json.loads(resp.content)
+        return resp.json()
 
     {{/methods}}
