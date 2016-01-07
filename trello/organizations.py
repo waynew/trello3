@@ -43,8 +43,8 @@ class Organizations(object):
         resp.raise_for_status()
         return json.loads(resp.content)
 
-    def update(self, idOrg_or_name, name=None, displayName=None, desc=None, website=None, prefs/permissionLevel=None):
-        resp = requests.put("https://trello.com/1/organizations/%s" % (idOrg_or_name), params=dict(key=self._apikey, token=self._token), data=dict(name=name, displayName=displayName, desc=desc, website=website, prefs/permissionLevel=prefs/permissionLevel))
+    def update(self, idOrg_or_name, name=None, displayName=None, desc=None, website=None, permissionLevel=None):
+        resp = requests.put("https://trello.com/1/organizations/%s" % (idOrg_or_name), params=dict(key=self._apikey, token=self._token), data=dict(name=name, displayName=displayName, desc=desc, website=website, permissionLevel=permissionLevel))
         resp.raise_for_status()
         return json.loads(resp.content)
 

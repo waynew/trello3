@@ -1,4 +1,8 @@
-from urllib import quote_plus
+try:
+    from urllib import quote_plus
+except ImportError:
+    # Probably Python3
+    from urllib.parse import quote_plus
 from .actions import Actions
 from .boards import Boards
 from .cards import Cards
