@@ -11,6 +11,6 @@ class Types(object):
     def get(self, id):
         resp = requests.get("https://trello.com/1/types/%s" % (id), params=dict(key=self._apikey, token=self._token), data=None)
         resp.raise_for_status()
-        return json.loads(resp.content)
+        return resp.json()
 
     
