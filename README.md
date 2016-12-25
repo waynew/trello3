@@ -10,8 +10,7 @@ Getting Started
 
 To use the Python API, first install it from PyPI using `pip`:
 
-    pip install trello
-
+    pip install trello3
 or from source:
 
     python setup.py install
